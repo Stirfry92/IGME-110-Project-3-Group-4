@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+	background-color: rgb(255, 239, 216);
+	margin: 0;
+      }
+      .topBar {
+	display: flex;
+	align-items: stretch;
+	flex-flow: row nowrap;
+        background-color: rgb(110, 200, 240);
+      }
+      .topBar > div {
+	background-color: rgb(255, 239, 216);
+	width: 300px;
+	margin: 10px;
+	flex-grow: 1;
+	text-align: center;
+	font-size: 30px;
+      }
+      /* Change color on hover */
+      .topBar > div:hover {
+ 	background-color: rgb(255, 250, 225);
+      }
+      .column {
+	float: left;
+	width: 50%;
+	padding: 15px;
+      }
+      .row: after {
+	content: "";
+	display: table;
+	clear: both;
+      }
+      header {
+        background-color: rgb(140, 230, 255);
+        padding: 10px;
+        text-align: center;
+        font-size: 35px;
+	border: 2px rgb(255, 239, 216);
+ 	border-radius: 0px;
+      }
+      a:link {
+	color: black;
+	background-color: transparent;
+	text-decoration: none;
+      }
+      a:visited {
+	color: black;
+	background-color: transparent;
+	text-decoration: none;
+      }
+      a:hover {
+	color: black;
+	background-color: transparent;
+	text-decoration: none;
+      }
+      a:active {
+	color: black;
+	background-color: transparent;
+	text-decoration: none;
+      }
+      img {
+	float: right;
+      }
+      .choices {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+      }
+      .choices > div {
+	background-color: rgb(140, 230, 255);
+	text-align: center;
+	font-size: 50px;
+	width: 400px;
+	margin: 10px;
+	border: 2px rgb(255, 239, 216);
+ 	border-radius: 20px;
+	flex-grow: 0;
+      }
+      textarea {
+	margin: 15px;
+	margin-left: 33.33%;
+	height: 100px;
+	cols: 50;
+	float: center;
+    </style>
+  </head>
+<body>
+<div class="topBar">
+  <div> <a href='index.html'>Home</a></div>
+  <div> <a href="#">About Us</a></div>
+  <div> <a href="#">Donate</a></div>
+  <div> <a href="#">Sign Up</a></div>
+</div>
+<header>
+<h1>YOUR EXCUSE HAS BEEN GRANTED:</h1>
+</header>
+<header style="margin: 20px; border-radius: 20px;">
+<h2>"Oopsie Daisy! ('Real' response would be provided in final product)"</h2>
+</header>
+<div class="choices">
+  <div> <a href='#'>Share</a></div>
+  <div> <a href='genie_broad.html'>Retry</a></div>
+  <div> <a href='#'>History</a></div>
+</div>
+</body>
+</html>

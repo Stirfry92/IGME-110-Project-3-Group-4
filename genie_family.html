@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+	background-color: rgb(255, 239, 216);
+	margin: 0;
+      }
+      .topBar {
+	display: flex;
+	align-items: stretch;
+	flex-flow: row nowrap;
+        background-color: rgb(110, 200, 240);
+      }
+      .topBar > div {
+	background-color: rgb(255, 239, 216);
+	width: 300px;
+	margin: 10px;
+	flex-grow: 1;
+	text-align: center;
+	font-size: 30px;
+      }
+      /* Change color on hover */
+      .topBar > div:hover {
+ 	background-color: rgb(255, 250, 225);
+      }
+      .column {
+	float: left;
+	width: 50%;
+	padding: 15px;
+      }
+      .row: after {
+	content: "";
+	display: table;
+	clear: both;
+      }
+      header {
+        background-color: rgb(140, 230, 255);
+        padding: 10px;
+        text-align: center;
+        font-size: 35px;
+	border: 2px rgb(255, 239, 216);
+ 	border-radius: 0px;
+      }
+      a:link {
+	color: black;
+	background-color: transparent;
+	text-decoration: none;
+      }
+      a:visited {
+	color: black;
+	background-color: transparent;
+	text-decoration: none;
+      }
+      a:hover {
+	color: black;
+	background-color: transparent;
+	text-decoration: none;
+      }
+      a:active {
+	color: black;
+	background-color: transparent;
+	text-decoration: none;
+      }
+      img {
+	float: right;
+      }
+      .choices {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+      }
+      .choices > div {
+	background-color: rgb(140, 230, 255);
+	text-align: center;
+	font-size: 50px;
+	width: 400px;
+	margin: 10px;
+	border: 2px rgb(255, 239, 216);
+ 	border-radius: 20px;
+	flex-grow: 0;
+      }
+    </style>
+  </head>
+<body>
+<div class="topBar">
+  <div> <a href='index.html'>Home</a></div>
+  <div> <a href="#">About Us</a></div>
+  <div> <a href="#">Donate</a></div>
+  <div> <a href="#">Sign Up</a></div>
+</div>
+<header>
+<h1>What family situation requires an excuse?</h1>
+</header>
+<div class="choices">
+  <div> <a href='genie_specific.html'>Awkward Family Event</a></div>
+  <div> <a href='genie_specific.html'>Forgot Responsibilities</a></div>
+  <div> <a href='genie_specific.html'>Avoiding Chores</a></div>
+  <div> <a href='genie_specific.html'>Running Late</a></div>
+</div>
+</body>
+</html>

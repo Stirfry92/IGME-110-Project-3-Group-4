@@ -1,33 +1,64 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href='https://fonts.googleapis.com/css?family=Akaya Kanadaka' rel='stylesheet'>
     <style>
       body {
-	background-color: rgb(255, 239, 216);
+	background-color: Black;
 	margin: 0;
+        font-family: 'Akaya Kanadaka';
+        font-size: 22px;
+	color: rgb(206, 150, 71);
+      }
+      #smokeBackground {
+	background-image:"C:\Users\sterl\OneDrive\Desktop\Prototype\backgroundSmoke.jpg";
+	background-repeat: repeat;
+	opacity: 0.5;
       }
       .topBar {
 	display: flex;
 	align-items: stretch;
 	flex-flow: row nowrap;
-        background-color: rgb(110, 200, 240);
+	justify-content: space-around;
+        background-color: rgb(115, 56, 138);
+	position: relative;
+	animation-name: dropDown;
+	animation-duration: 3s;
+	animation-timing-function: ease-out;
       }
-      .topBar > div {
-	background-color: rgb(255, 239, 216);
-	width: 300px;
-	margin: 10px;
-	flex-grow: 1;
+      .topBar .barButton {
+	background-color: rgb(193, 112, 224);
+	width: 240px;
+	margin: 5px;
+	border: none;
+	flex-grow: 4;
+	flex-shrink: 1;
 	text-align: center;
+	font-family: 'Akaya Kanadaka';
 	font-size: 30px;
+	cursor: pointer;
+	position: relative;
+	animation-name: dropDown;
+	animation-duration: 3s;
+	animation-timing-function: ease-out;
       }
-      /* Change color on hover */
-      .topBar > div:hover {
- 	background-color: rgb(255, 250, 225);
+      .topBar .barButton:hover {
+ 	background-color: rgb(215, 131, 247);
+      	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
       }
       .column {
+	color: Black;
+	background-color: rgb(193, 112, 224);
+	border: 10px solid rgb(115, 56, 138);
+	border-radius: 20px;
+	margin-left: 10%;
+	margin-bottom: 20px;
 	float: left;
-	width: 50%;
+	width: 80%;
 	padding: 15px;
+      }
+      .row: {
+	clear: left;
       }
       .row: after {
 	content: "";
@@ -35,12 +66,20 @@
 	clear: both;
       }
       header {
-        background-color: rgb(140, 230, 255);
+	color: Black;
+	border: 10px solid rgb(115, 56, 138);
+	margin: 5%;
+	margin-bottom: 20px;
+	width: auto;
+	border-radius: 20px;
+        background-color: rgb(193, 112, 224);
         padding: 10px;
         text-align: center;
         font-size: 35px;
-	border: 2px rgb(255, 239, 216);
- 	border-radius: 0px;
+	position: relative;
+	animation-name: dropDown;
+	animation-duration: 2s;
+	animation-timing-function: ease-out;
       }
       a:link {
 	color: black;
@@ -64,41 +103,107 @@
       }
       img {
 	float: right;
+	border-radius: 500px;
       }
-      .choices {
+
+      @keyframes dropDown {
+	0% {top: -500px;}
+	100% {top: 0px;}
+      }
+      @keyframes review {
+	0% {top: 500px;}
+	100% {top: 0px;}
+      }
+      .reviewBar {
+	margin: 20px;
+	border-radius: 20px;
+	width: 60%;
+	height: auto;
+	float: left;
 	display: flex;
-	flex-wrap: nowrap;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	justify-content: space-around;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+        background-color: rgb(110, 200, 240);
+	position: relative;
+	animation-duration: 3s;
+	animation-name: review;
       }
-      .choices > div {
+      .reviewBar > div {
+	border-radius: 20px;
 	background-color: rgb(140, 230, 255);
+	width: 240px;
+	margin: 20px;
+	border: none;
 	text-align: center;
+	font-family: 'Akaya Kanadaka';
+	font-size: 14px;
+      }
+      .bottomBar {
+	padding-left: 40%;
+	display: flex;
+	flex-direction: column;
+      }
+      .bottomBar .barButton {
+	color: rgb(206, 150, 71);
+	background-color: Black;
+	border: 5px solid rgb(206, 150, 71);
+	width: 240px;
+	margin: 5px;
+	border-radius: 20px;
+	flex-grow: 4;
+	flex-shrink: 1;
+	text-align: center;
+	font-family: 'Akaya Kanadaka';
 	font-size: 50px;
-	width: 400px;
-	margin: 10px;
-	border: 2px rgb(255, 239, 216);
- 	border-radius: 20px;
-	flex-grow: 0;
+	cursor: pointer;
+	position: relative;
+	animation-name: dropDown;
+	animation-duration: 2s;
+	animation-timing-function: ease-out;
+      }
+      .bottomBar .barButton:hover {
+	border: 5px solid rgb(246, 180, 111);
+	color: rgb(246, 180, 111);
+      	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
       }
     </style>
   </head>
 <body>
 <div class="topBar">
-  <div> <a href='index.html'>Home</a></div>
-  <div> <a href="#">About Us</a></div>
-  <div> <a href="#">Donate</a></div>
-  <div> <a href="#">Sign Up</a></div>
+<a href='index.html'>
+  <button class ="barButton">Home</button>
+</a>
+<a href='genie_broad.html'>
+  <button class ="barButton" style="background-color: rgb(215, 131, 247);box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);">Use Genie</button>
+</a>
+<a href="about_us.html">
+  <button class ="barButton">About Us</button>
+</a>
+<a href="history.html">
+  <button class ="barButton">Excuse History</button>
+</a>
+<a href="donate.html">
+  <button class ="barButton">Donate</button>
+</a>
+  <button class ="barButton" onclick="alert('We are terribly sorry for the inconvenience, but our account functions are down at this moment. Recently, our account servers recieved an uncontrolable power surge due to a recent thunderstorm, resulting in a massive outage. We are doing everything within our power to fix the issue in a timely fashion. Thank you for your understanding, user.')">Sign Up</button>
 </div>
 <header>
-<h1>First, what type of situation do you need an excuse for?</h1>
+<h1>Which category might you need an excuse for?</h1>
 </header>
-<div class="choices">
-  <div> <a href='genie_work.html'>Work</a></div>
-  <div> <a href='genie_school.html'>School</a></div>
-  <div> <a href='genie_friends.html'>Friends</a></div>
-  <div> <a href='genie_family.html'>Family</a></div>
+<div class="bottomBar">
+<a href="genie_work.html">
+  <button class ="barButton">Work</button>
+</a>
+<a href='genie_school.html'>
+  <button class ="barButton">School</button>
+</a>
+<a href='genie_people.html'>
+  <button class ="barButton">People</button>
+</a>
+<a href="genie_other.html">
+  <button class ="barButton">Quick Excuse!</button>
+</a>
 </div>
 </body>
 </html>
